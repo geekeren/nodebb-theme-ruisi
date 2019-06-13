@@ -9,6 +9,7 @@
 // other navbar variations.
 
 .navbar {
+  z-index: 1000;
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
@@ -657,4 +658,14 @@
       }
     }
   }
+}
+
+.navbar-fixed {
+  transform: translateY(-60px);
+  width: 100%;
+  position: fixed;
+  background: #fff;
+}
+#header-menu {
+  height: @navbar-height*2;
 }

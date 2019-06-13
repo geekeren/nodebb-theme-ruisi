@@ -174,7 +174,6 @@
 							<div class="hidden" id="search-fields">
 								<div class="form-group">
 									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
@@ -209,7 +208,7 @@
 				<!-- ENDIF !maintenanceHeader -->
 				<div style="clear: both"></div>
 			</div>
-			<div class="hidden-xs">
+			<div id="nav-menu" class="hidden-xs">
 				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
 					<li class="dropdown">
 						<a><i class="fa fa-angle-double-up pointer fa-fw pagetop"></i></a>
