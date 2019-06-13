@@ -9,9 +9,11 @@
 				</button>
 
 				<!-- IF brand:logo -->
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}" />
-				</a>
+				<span class="forum-logo">
+					<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
+					  <img alt="{brand:logo:alt}" class="{brand:logo:display}" src="{brand:logo}?{config.cache-buster}" />
+				  </a>
+				</span>
 				<!-- ENDIF brand:logo -->
 				<!-- IF config.showSiteTitle -->
 				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
@@ -49,7 +51,7 @@
 					<!-- IF !config.disableChat -->
 					<li class="chats dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw unread-count" data-content="{unreadCount.chat}"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
+							<i component="chat/icon" class="fa fa-comment-o fa-fw unread-count" data-content="{unreadCount.chat}"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
@@ -72,13 +74,13 @@
 							<!-- ELSE -->
 							<span component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor}; display: block;">{user.icon:text}</span>
 							<!-- ENDIF user.picture -->
-							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
 								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+									<span component="header/username">{user.username}</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
@@ -188,7 +190,6 @@
 					</li>
 				</ul>
 				<!-- ENDIF config.searchEnabled -->
-
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
 						<a href="#" id="reconnect" class="hide" title="[[global:reconnecting-message, {config.siteTitle}]]">
@@ -196,7 +197,19 @@
 						</a>
 					</li>
 				</ul>
-
+				<!-- ELSE -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="{relative_path}/login">
+							<i class="fa fa-sign-in fa-fw hidden-sm hidden-md hidden-lg"></i>
+							<span>[[global:login]]</span>
+						</a>
+					</li>
+				</ul>
+				<!-- ENDIF !maintenanceHeader -->
+				<div style="clear: both"></div>
+			</div>
+			<div class="hidden-xs">
 				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
 					<li class="dropdown">
 						<a><i class="fa fa-angle-double-up pointer fa-fw pagetop"></i></a>
@@ -215,38 +228,26 @@
 
 						<ul class="dropdown-menu" role="menu">
 							<li>
-  								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
-  							</li>
+								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+							</li>
 						</ul>
 					</li>
 				</ul>
-
 				<ul id="main-nav" class="nav navbar-nav">
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
 						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
-							<!-- IF navigation.iconClass -->
-							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
-							<!-- ENDIF navigation.iconClass -->
+						<!-- IF navigation.iconClass -->
+						<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
+						<!-- ENDIF navigation.iconClass -->
 
-							<!-- IF navigation.text -->
-							<span class="{navigation.textClass}">{navigation.text}</span>
-							<!-- ENDIF navigation.text -->
+						<!-- IF navigation.text -->
+						<span class="{navigation.textClass}">{navigation.text}</span>
+						<!-- ENDIF navigation.text -->
 						</a>
 					</li>
 					<!-- ENDIF function.displayMenuItem -->
 					<!-- END navigation -->
 				</ul>
-
-				<!-- ELSE -->
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="{relative_path}/login">
-							<i class="fa fa-sign-in fa-fw hidden-sm hidden-md hidden-lg"></i>
-							<span>[[global:login]]</span>
-						</a>
-					</li>
-				</ul>
-				<!-- ENDIF !maintenanceHeader -->
 			</div>

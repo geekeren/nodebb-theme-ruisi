@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "nodebb-theme-ruisi",
   "version": "9.1.38",
   "nbbpm": {
     "compatibility": "^1.12.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Ruisi theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/psychobunny/nodebb-theme-ruisi"
   },
   "keywords": [
     "nodebb",
@@ -36,7 +36,7 @@
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/psychobunny/nodebb-theme-ruisi/issues"
   },
   "dependencies": {
     "pulling": "^2.0.0",

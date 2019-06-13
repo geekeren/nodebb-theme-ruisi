@@ -16,6 +16,9 @@
 		</div>
 	</div>
 	<!-- ENDIF !isSpider -->
+		<footer class="footer">
+©2019 ThoughtWorks Inc. All right reserved.
+		</footer>
 
 
 	<script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>

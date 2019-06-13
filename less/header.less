@@ -11,7 +11,7 @@
 		}
 
 		li {
-			width: 400px;
+			width: 200px;
 			text-align: left;
 			list-style-type: none;
 			padding: 0.5em;
@@ -128,7 +128,7 @@
 	}
 
 	#user_dropdown {
-		padding: 10px 15px;
+		padding: 10px;
 
 		img, .user-icon {
 			.user-icon-style(30px, 1.8rem, 50%);
@@ -147,8 +147,12 @@
 
 	.forum-logo {
 		float: left;
-		max-height: 50px;
-		width: auto;
+		img {
+			max-width: 200px;
+			width: auto;
+			max-height: 100%;
+			padding-top: 10px;
+		}
 	}
 
 	@media (max-width: @screen-xs-max) {
@@ -405,14 +409,18 @@ label.dropdown-toggle {
 }
 
 .navbar-default {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.12);
 	.navbar-nav {
-		> li > label {
-			color: @navbar-default-link-color;
+		> li {
+			font-size: 16px;
+			> label {
+				color: @navbar-default-link-color;
 
-			&:hover,
-			&:focus {
-				color: @navbar-default-link-hover-color;
-				background-color: @navbar-default-link-hover-bg;
+				&:hover,
+				&:focus {
+					color: @navbar-default-link-hover-color;
+					background-color: @navbar-default-link-hover-bg;
+				}
 			}
 		}
 		> .active > label {
