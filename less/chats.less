@@ -1,7 +1,5 @@
 // Make chats page edge-to-edge
 .page-user-chats {
-	padding-top: 50px;
-
 	#content.container {
 		width: auto;
 		padding: 0;
@@ -197,7 +195,7 @@
 		clear: both;
 		list-style-type: none;
 		padding: 0.5em;
-		height: 80px;
+		height: @chat-list-item-height;
 		.pointer;
 
 		border-left: 1px solid;
@@ -322,16 +320,16 @@
 			left: 0px;
 
 			.avatar {
-				height: 80px;
-				width: 80px;
+				height: @chat-list-item-height;
+				width: @chat-list-item-height;
 				font-size: 40px;
-				border-radius: 0;
+				border-radius: 30px;
 			}
 		}
 
 		.avatar-placeholder {
-			height: 80px;
-			width: 80px;
+			height: @chat-list-item-height;
+			width: @chat-list-item-height;
 			background: @gray-lighter;
 			position: absolute;
 			top: 0px;

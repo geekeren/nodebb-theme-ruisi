@@ -661,11 +661,19 @@
 }
 
 .navbar-fixed {
-  transform: translateY(-60px);
+  transform: translateY(-50px);
   width: 100%;
   position: fixed;
   background: #fff;
 }
-#header-menu {
-  height: @navbar-height*2;
+//#header-menu {
+//  height: @navbar-height*2;
+//}
+#nav-dropdown {
+  border-bottom: solid 1px #f7f6f6;
+}
+#nav-menu {
+  .navbar-nav>li>a {
+    padding: 10px;
+  }
 }
