@@ -2,6 +2,6 @@
     "id": "nodebb-theme-ruisi",
     "name": "Ruisi",
     "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-ruisi",
+    "url": "https://github.com/geekeren/nodebb-theme-ruisi",
     "screenshot": "screenshot.png"
 }
